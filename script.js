@@ -1,6 +1,6 @@
-//  'use strict';
+ 'use strict';
  
-//  let user ={};
+
  
  const getData = () => {
      return fetch('db.json')
@@ -11,8 +11,8 @@
         .catch(error => console.log(error));
  };
  getData();
+
  const render = (data) => {
-     
     localStorage.setItem('user', JSON.stringify(data));
  };
  
@@ -32,7 +32,6 @@
      .then(data => console.log(data))
      .catch(error => console.log(error));
     };
-
  sendData('https://jsonplaceholder.typicode.com/posts', JSON.stringify(user));
  }
  
