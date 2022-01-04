@@ -1,5 +1,7 @@
  'use strict';
-  
+ 
+
+ 
  const getData = () => {
      return fetch('db.json')
         .then(res => res.json())
@@ -10,16 +12,12 @@
  };
  getData();
 
-
-
  const render = (data) => {
+ 
     localStorage.setItem('user', JSON.stringify(data));
  };
  
 
-
-
- 
  if(localStorage.getItem('user')) {
      const user = JSON.parse(localStorage.getItem('user'));
      const sendData = (url, data) => {
